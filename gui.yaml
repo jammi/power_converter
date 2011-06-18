@@ -1,0 +1,35 @@
+type: GUITree
+version: 0.8
+
+dependencies:
+- default_theme
+- controls
+
+class: RSence.GUIApp
+options:
+  label: Power Converter
+subviews:
+- class: HWindow
+  rect: [ 10, 10, 200, 120 ]
+  options:
+    label: Power Converter
+    windowResize: false
+  subviews:
+  - class: HStringView
+    rect: [ 8, 10, 60, 16 ]
+    options: { value: 'kW:', style: { text-align: right } }
+  - class: HStringView
+    rect: [ 8, 38, 60, 26 ]
+    options: { value: 'PS:', style: { text-align: right } }
+  - class: HStringView
+    rect: [ 8, 66, 60, 16 ]
+    options: { value: 'BHP:', style: { text-align: right } }
+  - class: HNumericTextControl
+    rect: [ 76, 8, ~, 20, 8, ~ ]
+    bind: :values.power_kw
+  - class: HNumericTextControl
+    rect: [ 76, 36, ~, 20, 8, ~ ]
+    bind: :values.power_ps
+  - class: HNumericTextControl
+    rect: [ 76, 64, ~, 20, 8, ~ ]
+    bind: :values.power_bhp

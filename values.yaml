@@ -1,0 +1,12 @@
+power_kw:
+  value: 0
+  restore: false
+  responder: from_kw
+power_ps:
+  value: 0
+  restore: false
+  responder: from_ps
+power_bhp:
+  value: 0
+  restore: false
+  responder: from_bhp
